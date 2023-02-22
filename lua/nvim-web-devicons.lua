@@ -1817,6 +1817,7 @@ local function get_default_icon()
 end
 
 local function get_icon(name, ext, opts)
+	name = string.lower(name)
 	ext = ext or name:match("^.*%.(.*)$") or ""
 	if not loaded then
 		setup()
